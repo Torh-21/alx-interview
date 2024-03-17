@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-"""Exercise to practice interview"""
+"""This Function Solves the Lockboxes Practice Interview Question"""
 from itertools import dropwhile
 
 
 def canUnlockAll(boxes):
-    """Checks if all boxes can be unlocked"""
+    """This checks if all boxes can be unlocked"""
 
     keys = {0}
     range_boxes = range(len(boxes))
@@ -18,11 +18,11 @@ def canUnlockAll(boxes):
                     keys.add(key)
             else:
                 not_found.add(i)
-        
+
         if range_boxes == not_found:
             return False
 
         if not not_found:
             return True
-    
+
         range_boxes = not_found
